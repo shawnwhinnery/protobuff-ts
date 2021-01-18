@@ -1,0 +1,12 @@
+{
+    "compileOnSave": true,
+    "sourceMap": true,
+    "compilerOptions": {
+        "moduleResolution": "node",
+        "target": "ES2020",
+        "esModuleInterop": false,
+        "preserveConstEnums": true,
+        "baseUrl": "./src",
+        "paths": {}
+    }
+}
