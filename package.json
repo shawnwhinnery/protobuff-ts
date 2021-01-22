@@ -1,7 +1,7 @@
 {
 	"name": "module",
 	"main": "./dist/main.js",
-	"version": "0.0.0",
+	"version": "0.0.1",
 	"dependencies": {
 		"fs-extra": "^9.0.1",
 		"protocol-buffers-schema": "^3.4.0"
