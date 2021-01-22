@@ -32,22 +32,22 @@ export interface Schema {
 }
 
 
-export enum type_map {
-	fixed32 = "number",
-	fixed64 = "number",
-	sfixed32 = "number",
-	sfixed64 = "number",
-	sint32 = "number",
-	sint64 = "number",
-	double = "number",
-	float = "number",
-	int32 = "number",
-	uint32 = "number",
-	int64 = "number",
-	uint64 = "number",
-	bool = "boolean",
-	string = "string",
-	bytes = "number[]"
+export const type_map = {
+	fixed32: "number",
+	fixed64: "number",
+	sfixed32: "number",
+	sfixed64: "number",
+	sint32: "number",
+	sint64: "number",
+	double: "number",
+	float: "number",
+	int32: "number",
+	uint32: "number",
+	int64: "number",
+	uint64: "number",
+	bool: "boolean",
+	string: "string",
+	bytes: ["string", "Uint8Array"]
 }
 
 export interface Field {
@@ -58,5 +58,5 @@ export interface Field {
 	repeated: boolean
 	options: any
 	name: string
-	type: type_map
+	type: any
 }
