@@ -31,7 +31,6 @@ export interface Schema {
 	options: SchemaOptions
 }
 
-
 export const type_map = {
 	fixed32: "number",
 	fixed64: "number",
@@ -47,7 +46,7 @@ export const type_map = {
 	uint64: "number",
 	bool: "boolean",
 	string: "string",
-	bytes: ["ArrayBufferLike"]
+	bytes: ["ArrayBufferLike", "string"]
 }
 
 export interface Field {
