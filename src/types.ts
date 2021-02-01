@@ -47,7 +47,7 @@ export const type_map = {
 	uint64: "number",
 	bool: "boolean",
 	string: "string",
-	bytes: ["string", "Uint8Array"]
+	bytes: ["ArrayBufferLike"]
 }
 
 export interface Field {
