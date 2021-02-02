@@ -31,22 +31,40 @@ export interface Schema {
 	options: SchemaOptions
 }
 
+enum types {
+	"fixed32",
+	"fixed64",
+	"sfixed32",
+	"sfixed64",
+	"sint32",
+	"sint64",
+	"double",
+	"float",
+	"int32",
+	"uint32",
+	"int64",
+	"uint64",
+	"bool",
+	"string",
+	"bytes"
+}
+
 export const type_map = {
-	fixed32: "number",
-	fixed64: "number",
-	sfixed32: "number",
-	sfixed64: "number",
-	sint32: "number",
-	sint64: "number",
-	double: "number",
-	float: "number",
-	int32: "number",
-	uint32: "number",
-	int64: "number",
-	uint64: "number",
-	bool: "boolean",
-	string: "string",
-	bytes: ["ArrayBufferLike", "Uint8Array", "string"]
+	[types["fixed32"]]: "number",
+	[types["fixed64"]]: "number",
+	[types["sfixed32"]]: "number",
+	[types["sfixed64"]]: "number",
+	[types["sint32"]]: "number",
+	[types["sint64"]]: "number",
+	[types["double"]]: "number",
+	[types["float"]]: "number",
+	[types["int32"]]: "number",
+	[types["uint32"]]: "number",
+	[types["int64"]]: "number",
+	[types["uint64"]]: "number",
+	[types["bool"]]: "boolean",
+	[types["string"]]: "string",
+	[types["bytes"]]: ["ArrayBufferLike", "Uint8Array", "string"]
 }
 
 export interface Field {
@@ -57,5 +75,5 @@ export interface Field {
 	repeated: boolean
 	options: any
 	name: string
-	type: any
+	type: types
 }

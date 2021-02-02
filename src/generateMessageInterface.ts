@@ -12,15 +12,15 @@ function compileInterfaceField({
 }: Field) {
 	var _required = required ? "" : "?",
 		_type = type_map[type] || type
-	
-	if(Array.isArray(_type)) {
-		if(repeated) _type = _type.map(t => t+'[]')
+
+	if (Array.isArray(_type)) {
+		if (repeated) _type = _type.map((t) => t + "[]")
 		_type = _type.join(" | ")
 	} else {
-		if(repeated) _type += "[]"
+		if (repeated) _type += "[]"
 	}
 
-	return `        ${name}${_required}:${_type}`
+	return `    ${name}${_required}:${_type}`
 }
 
 export default function generateMessageInterface({ name, fields }) {
